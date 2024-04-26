@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 
 const AddTouristSpot = () => {
 
@@ -15,11 +16,27 @@ const AddTouristSpot = () => {
         const description = form.description.value;
         const averageCost = form.averageCost.value;
         const seasonality = form.seasonality.value;
-        const travelTime = form.travelTime.value;
+        const travelTimeDays = form.travelTime.value;
         const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
 
-        const user = {name, photoURL, email, countryName, touristSpotName, location, description, averageCost, seasonality, travelTime, totalVisitorsPerYear}
-        console.log(user)
+        const user = {name, photoURL, email, countryName, touristSpotName, location, description, averageCost, seasonality, travelTimeDays, totalVisitorsPerYear}
+
+        // send to backend server
+        fetch("http://localhost:3000/touristSpots", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                toast.success("New tourist spot added to database");
+                form.reset();
+            }
+        })
     }
 
     return (
