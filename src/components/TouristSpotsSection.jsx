@@ -13,11 +13,11 @@ const TouristSpotsSection = ({touristSpots}) => {
     </div>
 
     <div className='w-10/12 mx-auto mt-0 mb-[50px] grid grid-cols-1 lg:grid-cols-2 gap-10'>
-        <div className='flex items-center justify-center'>
+        
       {
         touristSpots.map(touristSpot => <TouristSpot key={touristSpot._id} touristSpot={touristSpot}/>)
       }
-      </div>
+      
     </div>
     </>
   )
