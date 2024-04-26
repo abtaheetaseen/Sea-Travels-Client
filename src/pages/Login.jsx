@@ -7,14 +7,20 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
 
-    
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.name.value;
+        const password = form.password.value;
+        console.log(email, password)
+    }
 
   return (
     <>
     <div className='min-h-screen flex justify-center items-center'>
         
       <div>
-      <form className='my-10 flex flex-col justify-center items-center'>
+      <form onSubmit={handleLogin} className='my-10 flex flex-col justify-center items-center'>
         <div>
                 <input className='border-2 border-gray-400 mb-5' type="email" name='email' placeholder='Your E-Mail' required />
 
