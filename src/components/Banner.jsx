@@ -20,7 +20,7 @@ const Banner = () => {
 
         <div className='flex items-center justify-center'>
           <div>
-            <h1 className='text-3xl font-bold text-center mb-3'>To Travel is to Live.</h1>
+            <h1 className='text-3xl font-bold text-center mb-3'>SEA - South East Asia</h1>
             <p className='text-center mb-3'>Once the Travel bug bites there is no known antidote, and I know that I shall be happily infected until the end of my life.</p>
             <div className='flex items-center justify-center'>
             <Link>
