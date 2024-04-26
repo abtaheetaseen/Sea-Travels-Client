@@ -10,7 +10,7 @@ const Register = () => {
   return (
     <>
    
-    <div className='animate__animated animate__backInDown min-h-screen flex justify-center items-center'>
+    <div className='min-h-screen flex justify-center items-center'>
     <div>
       <form className='my-10 flex flex-col justify-center items-center'>
         
