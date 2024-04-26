@@ -15,7 +15,7 @@ const TouristSpotsSection = ({touristSpots}) => {
     <div className='w-10/12 mx-auto mt-0 mb-[50px] grid grid-cols-1 lg:grid-cols-2 gap-10'>
         
       {
-        touristSpots.map(touristSpot => <TouristSpot key={touristSpot._id} touristSpot={touristSpot}/>)
+        touristSpots.slice(0, 6).map(touristSpot => <TouristSpot key={touristSpot._id} touristSpot={touristSpot}/>)
       }
       
     </div>
