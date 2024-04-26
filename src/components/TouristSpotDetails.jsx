@@ -11,7 +11,7 @@ const TouristSpotDetails = () => {
     console.log(touristSpot)
 
   return (
-    <div className='min-hscreen grid grid-cols-1 lg:grid-cols-2 w-10/12 mx-auto my-[50px] gap-[50px]'>
+    <div className='min-hscreen grid grid-cols-1 lg:grid-cols-2 w-10/12 mx-auto mt-[50px] mb-[100px] gap-[50px]'>
       <div className='flex justify-center items-center'>
         <img className='rounded-xl' src={touristSpot.photoURL} alt="" />
       </div>

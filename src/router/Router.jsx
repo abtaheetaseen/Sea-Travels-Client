@@ -30,7 +30,8 @@ export const Router = createBrowserRouter([
             },
             {
                 path: "/allTouristSpot",
-                element: <AllTouristSpot />
+                element: <AllTouristSpot />,
+                loader: () => fetch(`http://localhost:3000/touristSpots`)
             },
             {
                 path: "/addTouristSpot",
