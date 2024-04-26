@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const TouristSpot = ({touristSpot}) => {
   return (
@@ -8,7 +9,9 @@ const TouristSpot = ({touristSpot}) => {
     <h2 className="card-title">{touristSpot.location}</h2>
     <p>{touristSpot.countryName}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-error btn-sm text-white">View Details</button>
+        <Link to={`/touristSpots/${touristSpot._id}`}>
+        <button className="btn btn-error btn-sm text-white">View Details</button>
+        </Link>
     </div>
   </div>
 </div>
