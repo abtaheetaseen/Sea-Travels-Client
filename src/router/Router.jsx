@@ -60,7 +60,7 @@ export const Router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateTouristSpot />
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
+                loader: () => fetch(`http://localhost:3000/touristSpots`)
             }
         ]
     }

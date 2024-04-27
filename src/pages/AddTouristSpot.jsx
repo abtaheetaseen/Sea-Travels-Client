@@ -45,6 +45,10 @@ const AddTouristSpot = () => {
 
     return (
         <>
+        <div data-aos="fade-down" className='text-center w-10/12 mx-auto mt-[50px]'>
+        <h1 className='text-3xl font-extrabold mb-3'>Add Tourist Spot</h1>
+        
+    </div>
             <div className='min-h-screen flex justify-center items-center'>
                 <div>
                     <form onSubmit={handleAddTouristSpot} className='my-10 flex flex-col justify-center items-center'>
