@@ -3,6 +3,7 @@ import Services from '../components/Services'
 import Banner from '../components/Banner'
 import { useLoaderData } from 'react-router-dom'
 import TouristSpotsSection from '../components/TouristSpotsSection'
+import About from '../components/About'
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <>
         <Banner />
+        <About />
         <Services />
         <TouristSpotsSection touristSpots={touristSpots}/>
     </>

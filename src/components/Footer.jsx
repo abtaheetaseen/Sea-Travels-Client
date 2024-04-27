@@ -34,13 +34,13 @@ const Footer = () => {
 				</ul>
 			</div>
 			<div className="space-y-3">
-				<h3 className="tracking-wide uppercase dark:text-gray-900">Company</h3>
+				<h3 className="tracking-wide uppercase dark:text-gray-900">Contact</h3>
 				<ul className="space-y-1">
 					<li>
-						<a rel="noopener noreferrer" href="#">Privacy</a>
+						<a rel="noopener noreferrer" href="#">Phone: +8801931183851</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Terms of Service</a>
+						<a rel="noopener noreferrer" href="#">Email: seatravels@gmail.com</a>
 					</li>
 				</ul>
 			</div>
