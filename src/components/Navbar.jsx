@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { AuthContext } from '../context/AuthProvider';
+import { useContext } from 'react';
+import toast from 'react-hot-toast';
 
 
 const Navbar = () => {
@@ -11,6 +14,18 @@ const Navbar = () => {
         deleteSpeed: 40,
     })
 
+    const { user, logOut, name, photoURL } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+        .then(() => {
+          toast.success("User logged out")
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      }
+
     return (
         <div className="navbar bg-base-100 mt-[10px] w-full lg:w-10/12 lg:mx-auto lg:mt-[10px] lg:mb-0">
             <div className="navbar-start">
@@ -21,9 +36,6 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-5">
                         <li>
                             <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/login">Login</NavLink>
                         </li>
                         <li>
                             <NavLink to="/allTouristSpot">All-Tourist-Spot</NavLink>
@@ -51,9 +63,6 @@ const Navbar = () => {
                         <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/login">Login</NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/allTouristSpot">All-Tourist-Spot</NavLink>
                     </li>
                     <li>
@@ -66,8 +75,27 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <div>
-                    logout
+            <div>
+                    {
+                        user ?
+                            <>
+                            <div className='flex items-center justify-center gap-2'>
+                                <div className='tooltip tooltip-left' data-tip={user.displayName || name}>
+                                    <img className='rounded-full h-[40px] w-[40px]' src={user.photoURL || photoURL} alt="" />
+                                </div>
+
+                                <div>
+                                    <button onClick={handleLogOut} className='btn btn-sm btn-neutral text-white'>Log Out</button>
+                                </div>
+                                </div>
+                            </> :
+                            <NavLink to="/login">
+                                <button className='btn btn-sm btn-error text-white'>
+                                Login
+                            </button>
+                            </NavLink>
+                            
+        }
                 </div>
             </div>
         </div>
