@@ -1,12 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../context/AuthProvider'
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
 import { IoEyeSharp } from "react-icons/io5";
 import { FaPen } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from 'sweetalert2';
 
 const MyList = () => {
+
+    const navigation = useNavigation();
+    if(navigation.state === "loading") {
+        return <div className='flex items-center justify-center'>
+    <div className="loading loading-infinity loading-lg min-h-screen "></div>
+</div> 
+    }
 
     const {user} = useContext(AuthContext);
 
