@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import toast from 'react-hot-toast';
+import { AuthContext } from '../context/AuthProvider';
 
 const AddTouristSpot = () => {
+
+    const {user} = useContext(AuthContext);
+
 
     const handleAddTouristSpot = (e) => {
         e.preventDefault();
@@ -45,11 +49,11 @@ const AddTouristSpot = () => {
                 <div>
                     <form onSubmit={handleAddTouristSpot} className='my-10 flex flex-col justify-center items-center'>
 
-                        <input className='border-2 border-gray-400 mb-5' type="text" name='name' placeholder='Your Name' required />
+                        <input className='border-2 border-gray-400 mb-5' type="text" name='name' placeholder='Your Name' required defaultValue={user.displayName} />
 
                         <input className='border-2 border-gray-400 mb-5' type="text" name='photoURL' placeholder='Photo URL' required />
 
-                        <input className='border-2 border-gray-400 mb-5' type="email" name='email' placeholder='Your E-Mail' required />
+                        <input className='border-2 border-gray-400 mb-5' type="email" name='email' placeholder='Your E-Mail' required defaultValue={user.email} />
 
                         <input className='border-2 border-gray-400 mb-5' type="text" name='countryName' placeholder='Country Name' required />
 

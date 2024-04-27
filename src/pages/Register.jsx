@@ -4,6 +4,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import toast from 'react-hot-toast';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
@@ -39,6 +40,16 @@ const Register = () => {
                 form.reset();
                 toast.success("User created successfully");
                 navigate("/");
+
+                // update profile
+            updateProfile(result.user, {
+                displayName: name,
+                photoURL: photoURL
+            })
+            .then(() => console.log("profile updated"))
+            .catch(error => {
+                console.log(error.message)
+            })
 
             })
             .catch((error) => {

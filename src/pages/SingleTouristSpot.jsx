@@ -18,7 +18,7 @@ const SingleTouristSpot = ({touristSpot}) => {
         </button>
     </Link>
   </div>
-  <figure><img src={touristSpot.photoURL} alt="Shoes" /></figure>
+  <figure><img src={touristSpot.photoURL} alt="" /></figure>
 </div>
       </div>
     </div>
