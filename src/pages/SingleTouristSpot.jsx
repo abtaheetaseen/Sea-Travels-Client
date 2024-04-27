@@ -8,7 +8,7 @@ const SingleTouristSpot = ({touristSpot}) => {
       <div className="card w-96 bg-base-100 shadow-2xl">
   <div className="card-body">
     <h2 className="card-title">{touristSpot.touristSpotName}</h2>
-    <p>Travel Time: {touristSpot.travelTimeDays}</p>
+    <p>Travel Time: {touristSpot.travelTimeDays} days</p>
     <p>Average Cost: {touristSpot.averageCost}</p>
     <p>Visitors Per Year: {touristSpot.totalVisitorsPerYear}</p>
     <p>Seasonality: {touristSpot.seasonality}</p>

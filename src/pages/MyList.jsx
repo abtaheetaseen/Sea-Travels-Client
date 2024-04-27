@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { IoEyeSharp } from "react-icons/io5";
 import { FaPen } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import Swal from 'sweetalert2';
 
 const MyList = () => {
 
     const {user} = useContext(AuthContext);
 
     const [myListSpots, setMyListSpots] = useState([])
+    const [control, setControl] = useState(false);
 
     useEffect(() => {
         fetch(`http://localhost:3000/touristSpots/${user?.email}`)
@@ -18,7 +20,40 @@ const MyList = () => {
             console.log(data)
             setMyListSpots(data);
         })
-    }, [user])
+    }, [user, control])
+
+    const handleDelete = (_id) => {
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+            fetch(`http://localhost:3000/touristSpots/${_id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.deletedCount > 0){
+                   Swal.fire({
+                title: "Deleted!",
+                text: `Spot has been deleted.`,
+                icon: "success"
+              });
+            //   remove from ui
+            setControl(!control);
+            }
+        })
+            }
+          });
+    }
  
   return (
     
@@ -52,17 +87,17 @@ const MyList = () => {
         </button>
     </Link>
 
-    <Link>
+    <Link to={`/updateTouristSpot/${spot._id}`}>
         <button className='mt-5 btn btn-sm btn-success text-white'>
         <FaPen />
         </button>
     </Link>
 
-    <Link>
-        <button className='mt-5 btn btn-sm btn-error text-white'>
+    <div>
+        <button onClick={() => handleDelete(spot._id)} className='mt-5 btn btn-sm btn-error text-white'>
         <MdDeleteForever />
         </button>
-    </Link>
+    </div>
     </div>
                                     </td>
                             </tr>)
