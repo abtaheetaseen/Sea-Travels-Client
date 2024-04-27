@@ -87,21 +87,17 @@ const MyList = () => {
                                 <td>{spot.countryName}</td>
                                 <td>{spot.averageCost}</td>
                                 <td>
-                                <div className='flex items-center justify-start gap-5'>
-    <Link to={`/touristSpots/${spot._id}`}>
-        <button className='mt-5 btn btn-sm btn-primary text-white'>
-        <IoEyeSharp />
-        </button>
-    </Link>
+                                <div className='flex items-center justify-start gap-2'>
+    
 
     <Link to={`/updateTouristSpot/${spot._id}`}>
-        <button className='mt-5 btn btn-sm btn-success text-white'>
+        <button className='btn btn-sm btn-success text-white'>
         <FaPen />
         </button>
     </Link>
 
     <div>
-        <button onClick={() => handleDelete(spot._id)} className='mt-5 btn btn-sm btn-error text-white'>
+        <button onClick={() => handleDelete(spot._id)} className='btn btn-sm btn-error text-white'>
         <MdDeleteForever />
         </button>
     </div>
