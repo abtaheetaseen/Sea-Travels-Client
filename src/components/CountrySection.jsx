@@ -27,7 +27,7 @@ const CountrySection = () => {
 
     <div className='w-10/12 mx-auto mt-0 mb-[50px] grid grid-cols-1 lg:grid-cols-2 gap-10'>
         {
-            countries.map(country => <Country key={country._id} country={country} />)
+            countries.slice(0,6).map(country => <Country key={country._id} country={country} />)
         }
     </div>
     </>

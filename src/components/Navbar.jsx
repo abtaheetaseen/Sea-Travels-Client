@@ -89,12 +89,20 @@ const Navbar = () => {
                                 </div>
                                 </div>
                             </> :
+                            <>
+                            <div className='flex items-center justify-center gap-2'>
                             <NavLink to="/login">
                                 <button className='btn btn-sm btn-error text-white'>
                                 Login
                             </button>
                             </NavLink>
-                            
+                            <NavLink to="/Register">
+                                <button className='btn btn-sm btn-error text-white'>
+                                Register
+                            </button>
+                            </NavLink>
+                            </div>
+                            </>
         }
                 </div>
             </div>
