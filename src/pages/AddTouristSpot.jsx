@@ -6,6 +6,8 @@ const AddTouristSpot = () => {
 
     const {user} = useContext(AuthContext);
 
+    const [options, setOptions] = useState("");
+
     const handleAddTouristSpot = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -13,7 +15,7 @@ const AddTouristSpot = () => {
         const name = form.name.value;
         const photoURL = form.photoURL.value;
         const email = form.email.value;
-        const countryName = form.countryName.value;
+        const countryName = options;
         const touristSpotName = form.touristSpotName.value;
         const location = form.location.value;
         const description = form.description.value;
@@ -58,7 +60,33 @@ const AddTouristSpot = () => {
 
                         <input className='border-2 border-gray-400 mb-5' type="email" name='email' placeholder='Your E-Mail' required defaultValue={user.email} />
 
-                        <input className='border-2 border-gray-400 mb-5' type="text" name='countryName' placeholder='Country Name' required />
+                        {/* <input className='border-2 border-gray-400 mb-5' type="text" name='countryName' placeholder='Country Name' required /> */}
+
+                        <select className='mb-5 border-2 border-slate-400' onChange={(e) => {setOptions(e.target.value)}}>
+                            <option>
+                                Bangladesh
+                            </option>
+
+                            <option>
+                                Malaysia
+                            </option>
+
+                            <option>
+                                Indonesia
+                            </option>
+
+                            <option>
+                                Thailand
+                            </option>
+
+                            <option>
+                                Vietnam
+                            </option>
+
+                            <option>
+                                Cambodia
+                            </option>
+                        </select>
 
                         <input className='border-2 border-gray-400 mb-5' type="text" name='touristSpotName' placeholder='Tourist Spot Name' required />
 
