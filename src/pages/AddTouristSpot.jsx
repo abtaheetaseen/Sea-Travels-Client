@@ -44,7 +44,7 @@ const AddTouristSpot = () => {
 
     return (
         <>
-        <div data-aos="fade-down" className='text-center w-10/12 mx-auto mt-[50px]'>
+        <div className='text-center w-10/12 mx-auto mt-[50px]'>
         <h1 className='text-3xl font-extrabold mb-3'>Add Tourist Spot</h1>
         
     </div>
