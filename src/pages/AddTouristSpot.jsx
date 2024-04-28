@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast';
 import { AuthContext } from '../context/AuthProvider';
 
 const AddTouristSpot = () => {
 
     const {user} = useContext(AuthContext);
-
 
     const handleAddTouristSpot = (e) => {
         e.preventDefault();

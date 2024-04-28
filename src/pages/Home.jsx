@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import { useLoaderData } from 'react-router-dom'
 import TouristSpotsSection from '../components/TouristSpotsSection'
 import About from '../components/About'
+import DarkLightMode from '../components/DarkLightMode'
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
 
   return (
     <>
+        <DarkLightMode />
         <Banner />
         <About />
         <Services />
