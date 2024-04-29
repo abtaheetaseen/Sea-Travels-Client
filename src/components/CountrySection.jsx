@@ -8,7 +8,7 @@ const CountrySection = () => {
     console.log(countries)
 
     useEffect(() => {
-        fetch("http://localhost:3000/country")
+        fetch("https://assignment-10-server-rho-drab.vercel.app/country")
         .then(res => res.json())
         .then(data => {
             setCountries(data)

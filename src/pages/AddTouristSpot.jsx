@@ -27,7 +27,7 @@ const AddTouristSpot = () => {
         const user = {name, photoURL, email, countryName, touristSpotName, location, description, averageCost, seasonality, travelTimeDays, totalVisitorsPerYear}
 
         // send to backend server
-        fetch("http://localhost:3000/touristSpots", {
+        fetch("https://assignment-10-server-rho-drab.vercel.app/touristSpots", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -22,7 +22,7 @@ export const Router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader: () => fetch("http://localhost:3000/touristSpots")
+                loader: () => fetch("https://assignment-10-server-rho-drab.vercel.app/touristSpots")
             },
             {
                 path: "/login",
@@ -54,14 +54,14 @@ export const Router = createBrowserRouter([
                 element: <PrivateRoute>
                     <TouristSpotDetails />
                 </PrivateRoute>,
-                loader: () => fetch(`http://localhost:3000/touristSpots`)
+                loader: () => fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots`)
             },
             {
                 path: "/updateTouristSpot/:id",
                 element: <PrivateRoute>
                     <UpdateTouristSpot />
                 </PrivateRoute>,
-                loader: () => fetch(`http://localhost:3000/touristSpots`)
+                loader: () => fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots`)
             },
             {
                 path: "/addCountry",
@@ -73,7 +73,7 @@ export const Router = createBrowserRouter([
             {
                 path: "/country/:countryName",
                 element: <SpecificCountryCards />,
-                loader: () => fetch(`http://localhost:3000/touristSpots`)
+                loader: () => fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots`)
             },
         ]
     }

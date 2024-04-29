@@ -15,7 +15,7 @@ const AddCountry = () => {
         console.log(newCountry)
 
         // send to backend server
-        fetch("http://localhost:3000/country", {
+        fetch("https://assignment-10-server-rho-drab.vercel.app/country", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

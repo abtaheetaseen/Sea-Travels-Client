@@ -20,7 +20,7 @@ const MyList = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/touristSpots/${user?.email}`)
+        fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots/${user?.email}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -41,7 +41,7 @@ const MyList = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-            fetch(`http://localhost:3000/touristSpots/${_id}`, {
+            fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots/${_id}`, {
             method: "DELETE"
         })
         .then(res => res.json())

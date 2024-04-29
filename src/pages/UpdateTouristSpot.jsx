@@ -31,7 +31,7 @@ const UpdateTouristSpot = () => {
         console.log(updatedTouristSpot)
 
         // send to backend server
-        fetch(`http://localhost:3000/touristSpots/${_id}`, {
+        fetch(`https://assignment-10-server-rho-drab.vercel.app/touristSpots/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
