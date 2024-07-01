@@ -10,7 +10,7 @@ This a actually a tourism based website in South East Asia where user can find t
 To run locally:
 1. Click the green "Code" button and copy the URL.
 2. Open a terminal and navigate to the directory where you want to clone the repository.
-3. Run this command: git clone
+3. Run this command: git clone and repo url
 4. To install dependencies use npm install command.
 5. To run the project use npm start command.
 
