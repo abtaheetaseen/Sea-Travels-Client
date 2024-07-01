@@ -1,9 +1,9 @@
 # React + Vite
 
-Website Name - SEA Travels
-GitHub(client): https://github.com/abtaheetaseen/Sea-Travels-Client
-GitHub(server): https://github.com/abtaheetaseen/Sea-Travels-Server
-Live Link: https://assignment-10-4fd57.web.app/
+1. Website Name - SEA Travels
+2. GitHub(client): https://github.com/abtaheetaseen/Sea-Travels-Client
+3. GitHub(server): https://github.com/abtaheetaseen/Sea-Travels-Server
+4. Live Link: https://assignment-10-4fd57.web.app/
 
 This a actually a tourism based website in South East Asia where user can find their desired tour plan and as well as add their tour plan by CRUD Operations. React is mainly used for client-side development, and for server-side scripting, Node.js and MongoDB are used.
 
