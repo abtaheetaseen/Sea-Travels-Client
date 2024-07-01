@@ -1,8 +1,20 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website Name - SEA Travels
+GitHub(client): https://github.com/abtaheetaseen/Sea-Travels-Client
+GitHub(server): https://github.com/abtaheetaseen/Sea-Travels-Server
+Live Link: https://assignment-10-4fd57.web.app/
 
-Currently, two official plugins are available:
+This a actually a tourism based website in South East Asia where user can find their desired tour plan and as well as add their tour plan by CRUD Operations. React is mainly used for client-side development, and for server-side scripting, Node.js and MongoDB are used.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run locally:
+1. Click the green "Code" button and copy the URL.
+2. Open a terminal and navigate to the directory where you want to clone the repository.
+3. Run this command: git clone
+4. To install dependencies use npm install command.
+5. To run the project use npm start command.
+
+Features:
+1. Only users with active logins can add tourist spots on the add-tourist-spot page. Additionally, there is a country section where users can locate tourism attractions in certain nations.
+2. Users that are logged in can create, edit, and remove their own tourist spot using the CRUD operation.
+3. For authentication, I use both Firebase Google and Firebase email/password-based authentication.
